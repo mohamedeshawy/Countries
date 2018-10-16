@@ -7,19 +7,32 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func LoginPressed(_ sender: Any) {
+        Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) {
+            (user,error) in
+            if error != nil {
+                self.errorLabel.text = error?.localizedDescription
+                return
+            }
+            self.errorLabel.text = ""
+            if let email = user?.email {
+                print(email)
+                print("Login is done Successful!")
+            }
+        }
     }
-
-
+    
 }
 
