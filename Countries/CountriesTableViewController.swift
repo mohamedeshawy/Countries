@@ -16,8 +16,8 @@ class CountriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 77
-        tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80
         
         let url = URL(string: "http://country.io/names.json")
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
