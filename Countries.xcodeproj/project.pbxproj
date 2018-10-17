@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		21E5AFD5FF37C057235BF555 /* Pods_Countries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182B5BAE5577B826CB0FBF52 /* Pods_Countries.framework */; };
+		813642732176A66300C7E7B7 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813642722176A66300C7E7B7 /* Country.swift */; };
+		815D10C42176A2C8006167D0 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815D10C32176A2C8006167D0 /* CountriesTableViewController.swift */; };
+		815D10C62176A304006167D0 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815D10C52176A304006167D0 /* CountryTableViewCell.swift */; };
 		817752ED2174E3F500D10910 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 817752EC2174E3F500D10910 /* GoogleService-Info.plist */; };
 		8192D3272174C8B800F50016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192D3262174C8B800F50016 /* AppDelegate.swift */; };
 		8192D3292174C8B800F50016 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192D3282174C8B800F50016 /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 		2E6566210101FA9D47FD3302 /* Pods-Countries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Countries.release.xcconfig"; path = "Pods/Target Support Files/Pods-Countries/Pods-Countries.release.xcconfig"; sourceTree = "<group>"; };
 		30FE1A33B9AFAFEB7F9375BE /* Pods-CountriesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesUITests/Pods-CountriesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		738B5F45DDD7351338F727C7 /* Pods-CountriesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesTests/Pods-CountriesTests.release.xcconfig"; sourceTree = "<group>"; };
+		813642722176A66300C7E7B7 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		815D10C32176A2C8006167D0 /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
+		815D10C52176A304006167D0 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		817752EC2174E3F500D10910 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8192D3232174C8B700F50016 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8192D3262174C8B800F50016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,10 +128,13 @@
 				8192D3282174C8B800F50016 /* ViewController.swift */,
 				8192D32A2174C8B800F50016 /* Main.storyboard */,
 				81A1D1E221755953009347F4 /* Register.swift */,
+				815D10C32176A2C8006167D0 /* CountriesTableViewController.swift */,
+				815D10C52176A304006167D0 /* CountryTableViewCell.swift */,
 				8192D32D2174C8B800F50016 /* Assets.xcassets */,
 				8192D32F2174C8B800F50016 /* LaunchScreen.storyboard */,
 				8192D3322174C8B800F50016 /* Info.plist */,
 				817752EC2174E3F500D10910 /* GoogleService-Info.plist */,
+				813642722176A66300C7E7B7 /* Country.swift */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -447,16 +456,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Countries/Pods-Countries-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,9 +486,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815D10C42176A2C8006167D0 /* CountriesTableViewController.swift in Sources */,
 				81A1D1E321755953009347F4 /* Register.swift in Sources */,
 				8192D3292174C8B800F50016 /* ViewController.swift in Sources */,
 				8192D3272174C8B800F50016 /* AppDelegate.swift in Sources */,
+				813642732176A66300C7E7B7 /* Country.swift in Sources */,
+				815D10C62176A304006167D0 /* CountryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

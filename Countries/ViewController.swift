@@ -30,6 +30,7 @@ class ViewController: UIViewController {
             if let email = user?.email {
                 print(email)
                 print("Login is done Successful!")
+                self.performSegue(withIdentifier: "toCountriesList", sender: self)
             }
         }
     }
